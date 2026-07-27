@@ -3,278 +3,923 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Política de Privacidade do aplicativo InRota."
+    />
     <title>Política de Privacidade - InRota</title>
+
     <style>
       :root {
         color-scheme: light;
-        --bg: #f7f7f8;
-        --card: #ffffff;
-        --text: #1f2937;
-        --muted: #4b5563;
-        --border: #d1d5db;
-        --accent: #2563eb;
+        --background: #f4f6f8;
+        --surface: #ffffff;
+        --text: #172033;
+        --muted: #536176;
+        --border: #d9e0e8;
+        --primary: #1f6feb;
+        --primary-soft: #eaf2ff;
+        --warning-background: #fff8e6;
+        --warning-border: #efc45d;
+        --warning-text: #6b4b00;
+        --shadow: 0 8px 28px rgba(23, 32, 51, 0.08);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: var(--bg);
+        background: var(--background);
         color: var(--text);
-        line-height: 1.6;
+        font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Arial,
+          sans-serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
       }
 
       main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 32px 20px 48px;
+        width: min(960px, calc(100% - 32px));
+        margin: 32px auto;
       }
 
-      .card {
-        background: var(--card);
+      article {
+        padding: 40px;
+        background: var(--surface);
         border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 28px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      header {
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--border);
       }
 
       h1 {
-        margin: 0 0 8px;
-        font-size: 2rem;
+        margin: 0 0 10px;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
         line-height: 1.2;
       }
 
       h2 {
-        margin: 28px 0 10px;
-        font-size: 1.15rem;
-        line-height: 1.3;
+        margin: 36px 0 12px;
+        font-size: 1.25rem;
+        line-height: 1.35;
       }
 
-      p,
-      li {
-        color: var(--text);
-        font-size: 1rem;
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 1.05rem;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      ul {
+        margin: 10px 0 10px 24px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 7px;
       }
 
       .muted {
         color: var(--muted);
       }
 
-      .meta {
-        margin-bottom: 24px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid var(--border);
+      .summary {
+        margin-top: 22px;
+        padding: 18px 20px;
+        background: var(--primary-soft);
+        border-left: 4px solid var(--primary);
+        border-radius: 10px;
       }
 
-      ul {
-        margin: 8px 0 0 22px;
-        padding: 0;
-      }
-
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
+      .notice {
+        margin-top: 18px;
+        padding: 18px 20px;
+        color: var(--warning-text);
+        background: var(--warning-background);
+        border: 1px solid var(--warning-border);
+        border-radius: 10px;
       }
 
       .contact {
         font-weight: 700;
       }
 
-      @media (max-width: 640px) {
+      .table-wrapper {
+        margin-top: 14px;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        min-width: 680px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid var(--border);
+      }
+
+      th {
+        background: #f7f9fc;
+      }
+
+      footer {
+        margin-top: 38px;
+        padding-top: 22px;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+
+      code {
+        padding: 2px 5px;
+        background: #f1f4f8;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 680px) {
         main {
-          padding: 16px;
+          width: min(100% - 20px, 960px);
+          margin: 10px auto;
         }
 
-        .card {
-          padding: 20px;
-          border-radius: 10px;
+        article {
+          padding: 24px 18px;
+          border-radius: 12px;
         }
 
-        h1 {
-          font-size: 1.6rem;
+        h2 {
+          margin-top: 30px;
         }
       }
     </style>
   </head>
+
   <body>
     <main>
-      <article class="card">
-        <header class="meta">
+      <article>
+        <header>
           <h1>Política de Privacidade do InRota</h1>
-          <p class="muted"><strong>Última atualização:</strong> 12 de julho de 2026</p>
+
           <p class="muted">
-            Esta Política de Privacidade descreve como o aplicativo InRota coleta,
-            usa, armazena e compartilha informações para permitir o planejamento e
-            o acompanhamento de rotas de entrega.
+            <strong>Última atualização:</strong> 26 de julho de 2026
           </p>
+
+          <p>
+            Esta Política de Privacidade explica como o InRota coleta, utiliza,
+            armazena, compartilha e protege dados pessoais durante o uso do
+            aplicativo e dos serviços relacionados.
+          </p>
+
+          <div class="summary">
+            <strong>Resumo:</strong> o InRota utiliza dados de conta, telefone,
+            dispositivo, integridade, assinatura e localização para autenticar o
+            usuário, proteger o acesso, habilitar funcionalidades de
+            roteirização e controlar o acesso ao plano contratado. O InRota não
+            vende dados pessoais.
+          </div>
         </header>
 
         <section>
-          <h2>1. Quem somos</h2>
+          <h2>1. Controlador e responsável pelo InRota</h2>
+
           <p>
-            O InRota é um aplicativo voltado ao planejamento de rotas de entrega,
-            importação de endereços por planilha, navegação em mapa, leitura de QR Code
-            e controle de entregas.
+            O InRota é um aplicativo destinado ao planejamento, organização e
+            acompanhamento de rotas de entrega.
           </p>
+
           <p>
-            Se você tiver dúvidas sobre esta política, entre em contato pelo e-mail
-            <span class="contact">contato@inrota.app</span>.
+            O responsável pelas decisões sobre o tratamento dos dados pessoais
+            descritos nesta Política é:
+          </p>
+
+          <div class="notice">
+            <strong>Deivid Bandiera da Silva</strong><br />
+
+            <strong>Guarulhos - SP</strong><br />
+          </div>
+
+          <p>
+            Canal de contato para assuntos de privacidade:
+            <a class="contact" href="mailto:contato@inrota.app">
+              contato@inrota.app </a
+            >.
           </p>
         </section>
 
         <section>
-          <h2>2. Quais dados coletamos</h2>
-          <p>Podemos coletar ou processar os seguintes dados:</p>
-          <ul>
-            <li>nome e e-mail da conta Google usada no login;</li>
-            <li>número de celular informado para cadastro da conta;</li>
-            <li>dados de autenticação e sessão, como tokens de acesso e renovação;</li>
-            <li>identificadores técnicos do aparelho e da instalação do aplicativo;</li>
-            <li>chave pública do aparelho usada para segurança do login;</li>
-            <li>localização atual do dispositivo durante o uso do aplicativo;</li>
-            <li>endereços de entrega importados por planilha ou informados manualmente;</li>
-            <li>endereço do ponto de destino final da rota;</li>
-            <li>coordenadas geográficas e dados de roteirização;</li>
-            <li>leitura de QR Code vinculada às entregas;</li>
-            <li>status de assinatura e identificação da compra, quando o plano pago estiver ativo;</li>
-            <li>registros técnicos de uso e erro necessários para funcionamento e suporte.</li>
-          </ul>
-        </section>
+          <h2>2. Aplicação desta Política</h2>
 
-        <section>
-          <h2>3. Como usamos os dados</h2>
-          <p>Usamos os dados para:</p>
-          <ul>
-            <li>autenticar o usuário com conta Google;</li>
-            <li>validar a instalação e reforçar a segurança do acesso;</li>
-            <li>cadastrar e manter a conta do usuário;</li>
-            <li>permitir a leitura de QR Code e o controle de entregas;</li>
-            <li>calcular e exibir rotas, distâncias e sequência de paradas;</li>
-            <li>importar e organizar endereços enviados em planilhas;</li>
-            <li>verificar a assinatura e liberar o acesso ao aplicativo;</li>
-            <li>prestar suporte, melhorar estabilidade e corrigir falhas;</li>
-            <li>cumprir obrigações legais e de segurança.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>4. Localização</h2>
           <p>
-            O InRota pode acessar a localização do dispositivo quando isso for necessário
-            para identificar o ponto inicial da rota, calcular e atualizar o trajeto e
-            mostrar a posição atual no mapa.
-          </p>
-          <p>
-            A localização é usada apenas para as funções do aplicativo e não deve ser
-            utilizada para rastreamento fora do contexto operacional do InRota.
-          </p>
-        </section>
-
-        <section>
-          <h2>5. Câmera</h2>
-          <p>
-            O aplicativo usa a câmera somente para leitura de QR Code relacionada às
-            entregas. Não usamos a câmera para captura de fotos pessoais, vídeo ou
-            outras finalidades alheias ao funcionamento do app.
-          </p>
-        </section>
-
-        <section>
-          <h2>6. Planilhas e endereços</h2>
-          <p>
-            Quando você importa uma planilha Excel, o InRota processa os dados para montar
-            a rota e exibir as entregas no mapa. Esses dados são usados apenas para essa
-            finalidade operacional.
-          </p>
-        </section>
-
-        <section>
-          <h2>7. Compartilhamento de dados</h2>
-          <p>
-            Podemos compartilhar dados somente com prestadores de serviço essenciais para
-            o funcionamento do aplicativo, incluindo:
-          </p>
-          <ul>
-            <li>Google, para autenticação;</li>
-            <li>MapTiler, para mapas, geocodificação e roteamento;</li>
-            <li>RevenueCat, para gerenciamento de assinatura;</li>
-            <li>Render, para hospedagem do backend e banco de dados;</li>
-            <li>Google Play, para validação de assinatura e distribuição do aplicativo.</li>
-          </ul>
-          <p>Não vendemos seus dados pessoais.</p>
-        </section>
-
-        <section>
-          <h2>8. Armazenamento e segurança</h2>
-          <p>
-            Adotamos medidas técnicas e administrativas para proteger os dados contra
-            acesso não autorizado, perda, alteração ou divulgação indevida.
-          </p>
-          <p>
-            Os tokens de sessão são armazenados em local seguro no dispositivo. Dados
-            sensíveis são mantidos apenas pelo tempo necessário para o funcionamento do
+            Esta Política se aplica ao aplicativo InRota, ao backend de
+            autenticação e assinaturas e às páginas oficiais relacionadas ao
             serviço.
           </p>
-        </section>
 
-        <section>
-          <h2>9. Retenção dos dados</h2>
           <p>
-            Mantemos os dados enquanto sua conta estiver ativa ou enquanto forem
-            necessários para prestar o serviço, cumprir obrigações legais, resolver
-            disputas ou fazer auditoria e suporte técnico.
-          </p>
-          <p>
-            Quando possível e aplicável, você pode solicitar a exclusão da sua conta e
-            dos dados associados.
+            Serviços externos utilizados pelo InRota possuem políticas próprias.
+            O tratamento realizado diretamente por esses fornecedores é regido
+            também pelos termos e políticas deles.
           </p>
         </section>
 
         <section>
-          <h2>10. Seus direitos</h2>
-          <p>Conforme a LGPD, você pode solicitar:</p>
+          <h2>3. Dados pessoais tratados</h2>
+
+          <h3>3.1. Dados da Conta Google</h3>
           <ul>
-            <li>confirmação do tratamento de dados;</li>
-            <li>acesso aos dados;</li>
-            <li>correção de dados incompletos ou desatualizados;</li>
-            <li>exclusão de dados, quando aplicável;</li>
-            <li>informação sobre compartilhamento;</li>
-            <li>revogação de consentimento, quando aplicável.</li>
+            <li>identificador da Conta Google;</li>
+            <li>nome;</li>
+            <li>endereço de e-mail;</li>
+            <li>
+              URL da foto de perfil, quando disponibilizada pela Conta Google.
+            </li>
+          </ul>
+
+          <p>
+            O InRota utiliza a Conta Google para autenticação. Conforme a
+            configuração vigente do serviço, o cadastro pode ser limitado a
+            endereços terminados em <code>@gmail.com</code>.
+          </p>
+
+          <h3>3.2. Dados cadastrais</h3>
+          <ul>
+            <li>número de telefone informado pelo usuário;</li>
+            <li>data de criação e atualização da conta;</li>
+            <li>status interno da conta.</li>
+          </ul>
+
+          <p>
+            O telefone pode ser normalizado para o padrão internacional. O fato
+            de o número ter sido informado não significa necessariamente que
+            tenha ocorrido validação por SMS.
+          </p>
+
+          <h3>3.3. Dados do dispositivo, instalação e segurança</h3>
+          <ul>
+            <li>identificador da instalação do aplicativo;</li>
+            <li>chave pública criptográfica registrada pelo dispositivo;</li>
+            <li>nome do pacote do aplicativo;</li>
+            <li>
+              assinaturas criptográficas usadas para confirmar requisições;
+            </li>
+            <li>
+              resultados técnicos do Google Play Integrity relacionados ao
+              reconhecimento do aplicativo, integridade do dispositivo e
+              licença;
+            </li>
+            <li>datas de cadastro, uso e atualização do dispositivo.</li>
+          </ul>
+
+          <p>
+            A chave privada correspondente permanece no dispositivo e não deve
+            ser enviada ao backend. O servidor utiliza a chave pública para
+            validar assinaturas e reduzir riscos de clonagem de sessão, fraude e
+            acesso não autorizado.
+          </p>
+
+          <h3>3.4. Dados de autenticação e sessão</h3>
+          <ul>
+            <li>identificadores de sessão;</li>
+            <li>tokens de acesso mantidos no dispositivo;</li>
+            <li>
+              hash criptográfico de tokens de renovação armazenado no servidor;
+            </li>
+            <li>
+              datas de criação, expiração, revogação e último uso da sessão;
+            </li>
+            <li>desafios temporários usados no processo de autenticação.</li>
+          </ul>
+
+          <p>
+            O backend não precisa armazenar o token de renovação em texto
+            aberto. Ele mantém um hash criptográfico para validar e revogar
+            sessões.
+          </p>
+
+          <h3>3.5. Localização, rotas e endereços</h3>
+          <ul>
+            <li>
+              localização atual do dispositivo durante o uso das funções de
+              rota;
+            </li>
+            <li>coordenadas geográficas;</li>
+            <li>ponto inicial e ponto final da rota;</li>
+            <li>endereços informados ou importados;</li>
+            <li>sequência de paradas, distâncias e geometria do percurso.</li>
+          </ul>
+
+          <p>
+            A localização é acessada para identificar a posição atual,
+            configurar o início ou o término da rota, exibir o usuário no mapa,
+            acompanhar o percurso e calcular ou atualizar trajetos.
+          </p>
+
+          <p>
+            O backend analisado de autenticação e assinaturas não mantém
+            histórico de localização, conteúdo de planilhas ou histórico
+            completo das rotas. Coordenadas e endereços podem, entretanto, ser
+            processados localmente no dispositivo ou enviados aos serviços de
+            mapas, geocodificação e roteamento necessários à funcionalidade
+            solicitada.
+          </p>
+
+          <h3>3.6. Planilhas, entregas e QR Code</h3>
+          <ul>
+            <li>
+              dados de entrega presentes em planilhas importadas pelo usuário;
+            </li>
+            <li>endereços e identificadores operacionais das entregas;</li>
+            <li>status operacional de entrega;</li>
+            <li>conteúdo lido de QR Codes vinculados às entregas.</li>
+          </ul>
+
+          <p>
+            Esses dados são utilizados para importar, organizar, localizar e
+            acompanhar entregas. O backend analisado de autenticação e
+            assinatura não armazena o conteúdo dessas planilhas nem o histórico
+            dos QR Codes.
+          </p>
+
+          <h3>3.7. Dados de assinatura</h3>
+          <ul>
+            <li>status da assinatura ou período de teste;</li>
+            <li>produto contratado;</li>
+            <li>loja responsável pela compra;</li>
+            <li>datas de início, renovação, expiração ou cancelamento;</li>
+            <li>indicação de renovação automática;</li>
+            <li>
+              identificadores de transação necessários ao controle interno da
+              assinatura enquanto a conta estiver ativa;
+            </li>
+            <li>eventos técnicos recebidos do RevenueCat.</li>
+          </ul>
+
+          <p>
+            O InRota não recebe nem armazena diretamente os dados completos do
+            cartão ou da forma de pagamento. O processamento da cobrança é
+            realizado pela Google Play.
+          </p>
+
+          <p>
+            Os eventos do RevenueCat armazenados localmente são minimizados. O
+            payload persistido não deve conter identificador do usuário do
+            RevenueCat, aliases, transferências de conta nem identificadores de
+            transação no conteúdo JSON do evento.
+          </p>
+
+          <h3>3.8. Registros técnicos</h3>
+          <ul>
+            <li>data e horário de acesso;</li>
+            <li>rota e método HTTP utilizados;</li>
+            <li>código de resposta;</li>
+            <li>identificador técnico da requisição;</li>
+            <li>
+              endereço IP ou endereço de rede, quando registrado pela
+              infraestrutura;
+            </li>
+            <li>versão do serviço e informações técnicas de falhas.</li>
+          </ul>
+
+          <p>
+            Tokens, credenciais e payloads sensíveis não devem ser incluídos nos
+            logs da aplicação.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Finalidades do tratamento</h2>
+
+          <p>Os dados podem ser utilizados para:</p>
+
+          <ul>
+            <li>criar, autenticar e manter a conta do usuário;</li>
+            <li>permitir login por Conta Google;</li>
+            <li>registrar e validar o dispositivo autorizado;</li>
+            <li>
+              prevenir fraude, abuso, clonagem de sessão e acessos indevidos;
+            </li>
+            <li>validar a integridade do aplicativo e do dispositivo;</li>
+            <li>gerenciar sessões, logout, renovação e revogação de acesso;</li>
+            <li>importar e organizar endereços e entregas;</li>
+            <li>calcular, exibir e acompanhar rotas;</li>
+            <li>mostrar a posição atual no mapa;</li>
+            <li>permitir leitura de QR Code vinculada às entregas;</li>
+            <li>verificar assinatura, teste gratuito e direito de acesso;</li>
+            <li>processar eventos de renovação, expiração e cancelamento;</li>
+            <li>fornecer suporte e solucionar falhas;</li>
+            <li>
+              proteger direitos e cumprir obrigações legais ou regulatórias.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2>11. Assinatura e pagamentos</h2>
+          <h2>5. Bases legais</h2>
+
           <p>
-            Quando a assinatura estiver habilitada, o status de pagamento poderá ser
-            processado por parceiros como Google Play e RevenueCat para liberar o acesso
-            ao plano pago.
+            Conforme a Lei Geral de Proteção de Dados Pessoais, o tratamento
+            pode ser realizado com fundamento, conforme o caso, em:
+          </p>
+
+          <ul>
+            <li>
+              execução de contrato ou de procedimentos relacionados ao uso do
+              aplicativo;
+            </li>
+            <li>cumprimento de obrigação legal ou regulatória;</li>
+            <li>
+              legítimo interesse, especialmente para segurança, prevenção a
+              fraudes, estabilidade e melhoria do serviço;
+            </li>
+            <li>consentimento, quando exigido;</li>
+            <li>
+              exercício regular de direitos em processo judicial, administrativo
+              ou arbitral;
+            </li>
+            <li>proteção do crédito, quando aplicável.</li>
+          </ul>
+
+          <p>
+            As permissões de localização e câmera são solicitadas pelo sistema
+            operacional e podem ser gerenciadas nas configurações do
+            dispositivo. A recusa de uma permissão pode impedir o funcionamento
+            da funcionalidade correspondente.
           </p>
         </section>
 
         <section>
-          <h2>12. Alterações nesta política</h2>
+          <h2>6. Uso da localização</h2>
+
           <p>
-            Esta política pode ser atualizada para refletir mudanças no aplicativo, nos
-            serviços usados ou na legislação aplicável. A versão mais recente deve
-            sempre ser consultada no link oficial publicado para o app.
+            A localização é utilizada no contexto operacional do InRota para
+            configurar pontos da rota, mostrar a posição no mapa, acompanhar o
+            percurso e recalcular trajetos.
+          </p>
+
+          <p>
+            O InRota não declara utilizar a localização para publicidade
+            comportamental nem para comercialização de perfis de deslocamento.
+          </p>
+
+          <p>
+            O aplicativo pode continuar tratando posições durante uma rota ativa
+            de acordo com as permissões concedidas, a configuração do sistema
+            operacional e a implementação disponível na versão instalada.
           </p>
         </section>
 
         <section>
-          <h2>13. Contato</h2>
+          <h2>7. Uso da câmera</h2>
+
           <p>
-            Se tiver dúvidas sobre privacidade, escreva para
-            <span class="contact">contato@inrota.app</span>.
+            A câmera é utilizada para leitura de QR Codes relacionados às
+            entregas. O InRota não utiliza essa permissão para realizar
+            gravações contínuas ou capturar imagens pessoais sem ação do
+            usuário.
+          </p>
+
+          <p>
+            O conteúdo detectado pelo leitor é utilizado para identificar ou
+            confirmar a entrega correspondente.
           </p>
         </section>
+
+        <section>
+          <h2>8. Processamento de planilhas</h2>
+
+          <p>
+            Quando o usuário seleciona uma planilha, o InRota processa os dados
+            necessários para importar entregas e montar a rota.
+          </p>
+
+          <p>
+            Dependendo da funcionalidade, os endereços podem ser enviados a
+            prestadores de mapas, geocodificação ou roteamento para conversão em
+            coordenadas, cálculo de trajetos e exibição no mapa.
+          </p>
+
+          <p>
+            O usuário é responsável por possuir autorização adequada para
+            inserir no aplicativo dados de terceiros presentes nas planilhas.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Compartilhamento e operadores</h2>
+
+          <p>
+            O InRota pode compartilhar ou permitir o processamento de dados
+            pelos seguintes fornecedores, somente conforme necessário:
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fornecedor ou categoria</th>
+                  <th>Finalidade</th>
+                  <th>Dados envolvidos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Google Sign-In</td>
+                  <td>Autenticação da conta</td>
+                  <td>Identificador Google, nome, e-mail e foto de perfil</td>
+                </tr>
+                <tr>
+                  <td>Google Play Integrity</td>
+                  <td>Segurança e validação da instalação</td>
+                  <td>
+                    Dados técnicos do app, dispositivo, instalação e licença
+                  </td>
+                </tr>
+                <tr>
+                  <td>Google Play</td>
+                  <td>Distribuição, assinatura e cobrança</td>
+                  <td>Produto, compra, assinatura, renovação e status</td>
+                </tr>
+                <tr>
+                  <td>RevenueCat</td>
+                  <td>Gerenciamento e sincronização de assinaturas</td>
+                  <td>Status, produto, datas e eventos de assinatura</td>
+                </tr>
+                <tr>
+                  <td>MapTiler</td>
+                  <td>Mapas e busca/geocodificação de endereços</td>
+                  <td>Endereços, termos pesquisados e coordenadas</td>
+                </tr>
+                <tr>
+                  <td>Serviço de roteamento utilizado pelo aplicativo</td>
+                  <td>Cálculo e atualização de trajetos</td>
+                  <td>Coordenadas, pontos da rota e parâmetros de percurso</td>
+                </tr>
+                <tr>
+                  <td>Infraestrutura de hospedagem</td>
+                  <td>Operação do backend</td>
+                  <td>
+                    Conta, dispositivo, sessão, assinatura e registros técnicos
+                  </td>
+                </tr>
+                <tr>
+                  <td>Banco de dados PostgreSQL</td>
+                  <td>Armazenamento dos dados do backend</td>
+                  <td>Conta, dispositivo, segurança, sessão e assinatura</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="notice">
+            <strong>CONFIRMAR ANTES DA PUBLICAÇÃO:</strong><br />
+            1. Caso o backend e o PostgreSQL estejam hospedados no Render,
+            substitua “Infraestrutura de hospedagem” por
+            <strong>“Render”</strong>.<br />
+            2. Substitua “Serviço de roteamento utilizado pelo aplicativo” pelo
+            nome real do serviço, caso seja diferente do MapTiler.<br />
+            3. Se algum desses serviços não receber dados, remova a linha
+            correspondente.
+          </div>
+
+          <p>O InRota não vende dados pessoais.</p>
+
+          <p>
+            Dados também podem ser compartilhados quando isso for necessário
+            para cumprir obrigação legal, ordem judicial, solicitação de
+            autoridade competente ou proteger direitos do InRota, dos usuários
+            ou de terceiros.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Transferência internacional</h2>
+
+          <p>
+            Alguns fornecedores utilizados pelo InRota podem armazenar ou
+            processar dados fora do Brasil.
+          </p>
+
+          <p>
+            Nessas situações, o tratamento deve observar mecanismos e medidas
+            compatíveis com a legislação aplicável, inclusive requisitos
+            relacionados à transferência internacional de dados pessoais.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Armazenamento e segurança</h2>
+
+          <p>
+            O InRota adota medidas técnicas e administrativas proporcionais aos
+            riscos do serviço, incluindo:
+          </p>
+
+          <ul>
+            <li>comunicação protegida por HTTPS;</li>
+            <li>tokens com validade limitada;</li>
+            <li>armazenamento de hash do token de renovação no servidor;</li>
+            <li>revogação de sessões;</li>
+            <li>
+              validação de existência e status da conta em rotas protegidas;
+            </li>
+            <li>assinaturas criptográficas vinculadas à instalação;</li>
+            <li>Google Play Integrity;</li>
+            <li>restrição e ocultação de dados sensíveis nos logs;</li>
+            <li>transações de banco para operações críticas.</li>
+          </ul>
+
+          <p>
+            Nenhum sistema é absolutamente seguro. Caso seja identificado um
+            incidente relevante, serão adotadas as medidas técnicas, legais e
+            comunicacionais aplicáveis.
+          </p>
+        </section>
+
+        <section>
+          <h2>12. Retenção dos dados</h2>
+
+          <p>
+            Os dados são mantidos apenas pelo período necessário para cumprir as
+            finalidades descritas nesta Política, observadas necessidades
+            operacionais, segurança, prevenção a fraudes, exercício de direitos
+            e obrigações legais.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Dados da conta:</strong> enquanto a conta estiver ativa ou
+              até a solicitação de exclusão, ressalvadas hipóteses legais de
+              retenção.
+            </li>
+            <li>
+              <strong>Sessões:</strong> até expiração, revogação, logout ou
+              exclusão da conta.
+            </li>
+            <li>
+              <strong>Desafios de autenticação:</strong> possuem validade curta
+              e podem permanecer temporariamente registrados para segurança e
+              prevenção de reutilização.
+            </li>
+            <li>
+              <strong>Dados de dispositivo e integridade:</strong> enquanto
+              forem necessários para segurança da conta e da instalação.
+            </li>
+            <li>
+              <strong>Assinatura interna:</strong> enquanto a conta estiver
+              ativa e o dado for necessário para verificar o acesso.
+            </li>
+            <li>
+              <strong>Registros técnicos:</strong> pelo período necessário para
+              segurança, diagnóstico, auditoria e cumprimento de obrigações.
+            </li>
+            <li>
+              <strong>Dados mantidos por terceiros:</strong> conforme as
+              políticas e obrigações da Google Play, Google e RevenueCat.
+            </li>
+          </ul>
+        </section>
+
+        <section id="exclusao">
+          <h2>13. Exclusão da conta e dos dados</h2>
+
+          <p>
+            O usuário pode solicitar a exclusão da conta diretamente no
+            aplicativo, por meio da opção disponível nas configurações da conta.
+          </p>
+
+          <p>
+            Também será disponibilizado um recurso externo na internet para
+            solicitação de exclusão:
+          </p>
+
+          <div class="notice">
+            <strong>Link público de exclusão da conta: </strong><br />
+
+            <strong>https://inrota.app/excluir-conta</strong>
+          </div>
+
+          <p>Quando a exclusão é confirmada pelo backend do InRota:</p>
+
+          <ul>
+            <li>a conta local é excluída;</li>
+            <li>
+              o nome, e-mail, foto e telefone são removidos do banco local;
+            </li>
+            <li>dispositivos e chaves públicas são excluídos;</li>
+            <li>sessões e hashes de tokens de renovação são excluídos;</li>
+            <li>desafios vinculados às instalações da conta são excluídos;</li>
+            <li>a assinatura interna vinculada à conta é excluída;</li>
+            <li>
+              eventos locais do RevenueCat vinculáveis à conta são excluídos;
+            </li>
+            <li>
+              tokens anteriormente emitidos deixam de permitir acesso às rotas
+              protegidas porque a conta não existe mais.
+            </li>
+          </ul>
+
+          <p>
+            Eventos técnicos futuros do RevenueCat sem usuário local
+            correspondente podem ser registrados de forma idempotente com
+            conteúdo minimizado e sem associação a uma conta do InRota.
+          </p>
+
+          <p>
+            Informações poderão ser preservadas quando a retenção for necessária
+            para cumprimento de obrigação legal, prevenção a fraudes, segurança,
+            proteção do serviço ou exercício regular de direitos.
+          </p>
+
+          <p>
+            <strong>
+              A exclusão da conta do InRota não cancela automaticamente uma
+              assinatura ativa na Google Play.
+            </strong>
+            O cancelamento deve ser realizado pelo usuário na área de
+            assinaturas da Google Play.
+          </p>
+
+          <p>
+            A exclusão da conta do InRota também não exclui a Conta Google do
+            usuário. Determinadas informações de compra e assinatura podem
+            permanecer nos sistemas da Google Play e do RevenueCat conforme suas
+            políticas e obrigações próprias.
+          </p>
+        </section>
+
+        <section>
+          <h2>14. Direitos do titular</h2>
+
+          <p>
+            Nos termos da LGPD e observadas as hipóteses legais aplicáveis, o
+            titular pode solicitar:
+          </p>
+
+          <ul>
+            <li>confirmação da existência de tratamento;</li>
+            <li>acesso aos dados pessoais;</li>
+            <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li>
+              anonimização, bloqueio ou eliminação de dados desnecessários,
+              excessivos ou tratados em desconformidade;
+            </li>
+            <li>portabilidade, quando aplicável e regulamentada;</li>
+            <li>informações sobre compartilhamento de dados;</li>
+            <li>
+              eliminação dos dados tratados com consentimento, quando aplicável;
+            </li>
+            <li>revogação do consentimento;</li>
+            <li>
+              informação sobre a possibilidade de negar consentimento e as
+              consequências da negativa;
+            </li>
+            <li>
+              oposição a tratamento realizado em desconformidade com a LGPD;
+            </li>
+            <li>revisão de decisões automatizadas, quando aplicável.</li>
+          </ul>
+
+          <p>
+            Para exercer esses direitos, entre em contato pelo e-mail
+            <a class="contact" href="mailto:contato@inrota.app">
+              contato@inrota.app </a
+            >.
+          </p>
+
+          <p>
+            Poderão ser solicitadas informações adicionais para confirmar a
+            identidade do requerente e evitar que terceiros tenham acesso ou
+            excluam dados indevidamente.
+          </p>
+        </section>
+
+        <section>
+          <h2>15. Crianças e adolescentes</h2>
+
+          <p>
+            O InRota é uma ferramenta operacional voltada a usuários com
+            capacidade para utilizar o serviço e realizar atividades de entrega.
+            O aplicativo não é direcionado a crianças.
+          </p>
+
+          <p>
+            A faixa etária declarada nesta Política deve permanecer coerente com
+            o público-alvo informado na Google Play Console.
+          </p>
+        </section>
+
+        <section>
+          <h2>16. Responsabilidade sobre dados de terceiros</h2>
+
+          <p>
+            Planilhas e entregas podem conter endereços, nomes, telefones,
+            identificadores operacionais ou outras informações relacionadas a
+            terceiros.
+          </p>
+
+          <p>
+            Ao inserir ou importar esses dados, o usuário declara possuir
+            autorização ou outra base jurídica adequada para utilizá-los no
+            contexto das entregas.
+          </p>
+        </section>
+
+        <section>
+          <h2>17. Alterações nesta Política</h2>
+
+          <p>
+            Esta Política pode ser atualizada para refletir alterações no
+            aplicativo, no backend, nos fornecedores, nas práticas de segurança
+            ou na legislação.
+          </p>
+
+          <p>
+            A data da última atualização será indicada no início do documento.
+            Em caso de alteração relevante, poderá ser apresentado aviso no
+            aplicativo ou em outro canal apropriado.
+          </p>
+        </section>
+
+        <section>
+          <h2>18. Legislação aplicável</h2>
+
+          <p>
+            Esta Política deve ser interpretada conforme a legislação
+            brasileira, especialmente:
+          </p>
+
+          <ul>
+            <li>
+              Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais;
+            </li>
+            <li>Lei nº 12.965/2014 — Marco Civil da Internet;</li>
+            <li>
+              Lei nº 8.078/1990 — Código de Defesa do Consumidor, quando
+              aplicável;
+            </li>
+            <li>Código Civil Brasileiro;</li>
+            <li>demais normas aplicáveis ao serviço.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>19. Contato</h2>
+
+          <p>
+            Para dúvidas, solicitações relacionadas à privacidade ou exercício
+            de direitos, utilize:
+          </p>
+
+          <p>
+            <strong>E-mail:</strong>
+            <a class="contact" href="mailto:contato@inrota.app">
+              contato@inrota.app
+            </a>
+          </p>
+
+          <div class="notice">
+            <strong>OPCIONAL:</strong><br />
+            Inclua endereço postal ou outro canal de atendimento caso exista e
+            seja utilizado oficialmente pelo InRota.
+          </div>
+        </section>
+
+        <footer>
+          <p>InRota — Política de Privacidade</p>
+        </footer>
       </article>
     </main>
   </body>
